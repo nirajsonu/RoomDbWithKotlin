@@ -1,0 +1,143 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+
+
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.roomdbwithkotlin"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+
+        viewBinding = true
+        dataBinding=true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+    def roomVersion = "2.4.2"
+    def viewModelLiveData = "2.2.0"
+    def work="2.7.1"
+
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+
+    //testing
+    testImplementation "com.google.truth:truth:1.1.3"
+    androidTestImplementation "com.google.truth:truth:1.1.3"
+
+
+    //view model and live data
+    implementation "androidx.lifecycle:lifecycle-extensions:$viewModelLiveData"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+
+
+    implementation("androidx.room:room-ktx:2.4.2")
+
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+
+
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
+
+
+
+    //Navigation
+    def nav_version = "2.4.2"
+
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+
+    //Firebase Analytics
+    implementation 'com.google.firebase:firebase-analytics:21.0.0'
+
+    // Add the Firebase SDK for Crashlytics.
+    implementation platform('com.google.firebase:firebase-bom:30.0.1')
+
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+
+    //FireStore
+    implementation 'com.google.firebase:firebase-firestore:24.1.2'
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.1.2'
+
+    //fireStorage
+    implementation platform('com.google.firebase:firebase-bom:30.0.1')
+
+    // Declare the dependency for the Cloud Storage library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-storage-ktx'
+
+
+    //WorkManager
+    implementation "androidx.work:work-runtime-ktx:$work"
+
+
+
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin :'com.google.firebase.crashlytics'

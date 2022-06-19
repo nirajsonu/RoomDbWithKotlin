@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "472793576395",
+    "project_id": "fir-kotlin-8fcb3",
+    "storage_bucket": "fir-kotlin-8fcb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472793576395:android:be0e52ee4c585d6c57fc4e",
+        "android_client_info": {
+          "package_name": "com.example.roomdbwithkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472793576395-2anfep1rip1s6nkei2cd1qbuijn184vo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEXtMnA6ucSTQLpcdUTWcIpQ2rIxGxrxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472793576395-2anfep1rip1s6nkei2cd1qbuijn184vo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

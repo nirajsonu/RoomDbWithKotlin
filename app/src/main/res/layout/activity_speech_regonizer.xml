@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".speechregonizer.SpeechRegonizer">
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Text to speech"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:id="@+id/speech"
+        >
+    </EditText>
+
+    <Button
+        android:id="@+id/speck"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Speech to Text"
+        app:layout_constraintTop_toBottomOf="@+id/speech"
+        >
+    </Button>
+    <Button
+        android:id="@+id/text_to_speech"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Text to speech"
+        app:layout_constraintTop_toBottomOf="@+id/speck"
+        >
+    </Button>
+</androidx.constraintlayout.widget.ConstraintLayout>
