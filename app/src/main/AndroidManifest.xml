@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomDbWithKotlin">
         <activity
-            android:name=".speechregonizer.SpeechRegonizer"
+            android:name=".timer.CountDownTimerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,11 +29,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".speechregonizer.SpeechRegonizer"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".wifi.WifiActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".bluethooth.BluetoothActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".internalstorge.InternalActivity"
             android:exported="false" />
@@ -55,7 +60,6 @@
         <activity
             android:name=".permissions.PermissionActivity"
             android:exported="true">
-
         </activity>
         <activity
             android:name=".firebase.firestore.ActivityInsertData"
